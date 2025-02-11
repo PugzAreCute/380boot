@@ -1,0 +1,7 @@
+Category: desktop
+Board URL: https://i.dell.com/sites/csdocuments/Business_solutions_engineering-Docs_Documents/en/optiplex-380-tech-guide.pdf
+ROM package: SOIC-8
+ROM protocol: SPI
+ROM socketed: n
+Flashrom support: y
+Release year: 2009

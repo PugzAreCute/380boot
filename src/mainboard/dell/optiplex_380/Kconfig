@@ -1,0 +1,23 @@
+## SPDX-License-Identifier: GPL-2.0-only
+
+if BOARD_DELL_OPTIPLEX_380
+
+config BOARD_SPECIFIC_OPTIONS
+	def_bool y
+	select CPU_INTEL_SOCKET_LGA775
+	select NORTHBRIDGE_INTEL_X4X
+	select SOUTHBRIDGE_INTEL_I82801GX
+	select BOARD_ROMSIZE_KB_2048
+	select INTEL_GMA_HAVE_VBT
+	select MAINBOARD_HAS_LIBGFXINIT
+	select HAVE_ACPI_TABLES
+	select HAVE_ACPI_RESUME
+	select DRIVERS_I2C_CK505
+
+config MAINBOARD_DIR
+	default "dell/optiplex_380"
+
+config MAINBOARD_PART_NUMBER
+	default "Optiplex 380"
+
+endif # BOARD_DELL_OPTIPLEX_380
