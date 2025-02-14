@@ -8,28 +8,39 @@
 
 If (PICM) {
 	Return (Package() {
-		/* PCI1 SLOT 1 */
-		Package() { 0x0003ffff, 0, 0, 0x14},
-		Package() { 0x0003ffff, 1, 0, 0x15},
-		Package() { 0x0003ffff, 2, 0, 0x16},
-		Package() { 0x0003ffff, 3, 0, 0x17},
+		/* API4 */
+		Package (){ 0x0001FFFF, 0, 0, 0x11 }, 
+		Package (){ 0x0001FFFF, 1, 0, 0x12 }, 
+		Package (){ 0x0001FFFF, 2, 0, 0x13 }, 
+		Package (){ 0x0001FFFF, 3, 0, 0x10 }, 
 
-		/* PCI1 SLOT 2 */
-		Package() { 0x0004ffff, 0, 0, 0x15},
-		Package() { 0x0004ffff, 1, 0, 0x16},
-		Package() { 0x0004ffff, 2, 0, 0x17},
-		Package() { 0x0004ffff, 3, 0, 0x14},
+		/* Package (){0xFFFF, 0, 0, 0x10}, 
+		Package (){0xFFFF, 1, 0, 0x11}, 
+		Package (){0xFFFF, 2, 0, 0x12}, 
+		Package (){0xFFFF, 3, 0, 0x13},  */
+
+		Package (){ 0x0002FFFF, 0, 0, 0x12 }, 
+		Package (){ 0x0002FFFF, 1, 0, 0x13 }, 
+		Package (){ 0x0002FFFF, 2, 0, 0x10 }, 
+		Package (){ 0x0002FFFF, 3, 0, 0x11 }
 	})
 } Else {
 	Return (Package() {
-		Package() { 0x0003ffff, 0, \_SB.PCI0.LPCB.LNKE, 0},
-		Package() { 0x0003ffff, 1, \_SB.PCI0.LPCB.LNKF, 0},
-		Package() { 0x0003ffff, 2, \_SB.PCI0.LPCB.LNKG, 0},
-		Package() { 0x0003ffff, 3, \_SB.PCI0.LPCB.LNKH, 0},
+		/* PIC4 */
+		Package (){ 0x0001FFFF, 0, \_SB.PCI0.LPCB.LNKB, 0 },
+		Package (){ 0x0001FFFF, 1, \_SB.PCI0.LPCB.LNKC, 0 },
+		Package (){ 0x0001FFFF, 2, \_SB.PCI0.LPCB.LNKD, 0 }, 
+		Package (){ 0x0001FFFF, 3, \_SB.PCI0.LPCB.LNKA, 0 }, 
 
-		Package() { 0x0004ffff, 0, \_SB.PCI0.LPCB.LNKF, 0},
-		Package() { 0x0004ffff, 1, \_SB.PCI0.LPCB.LNKG, 0},
-		Package() { 0x0004ffff, 2, \_SB.PCI0.LPCB.LNKH, 0},
-		Package() { 0x0004ffff, 3, \_SB.PCI0.LPCB.LNKE, 0},
+		/* Package (){0xFFFF, 0, \_SB.PCI0.LPCB.LNKA, 0}, 
+		Package (){0xFFFF, 1, \_SB.PCI0.LPCB.LNKB, 0}, 
+		Package (){0xFFFF, 2, \_SB.PCI0.LPCB.LNKC, 0}, 
+		Package (){0xFFFF, 3, \_SB.PCI0.LPCB.LNKD, 0}, */
+
+		Package (){ 0x0002FFFF, 0, \_SB.PCI0.LPCB.LNKC, 0 }, 
+		Package (){ 0x0002FFFF, 1, \_SB.PCI0.LPCB.LNKD, 0 }, 
+		Package (){ 0x0002FFFF, 2, \_SB.PCI0.LPCB.LNKA, 0 }, 
+		Package (){ 0x0002FFFF, 3, \_SB.PCI0.LPCB.LNKB, 0 }
+
 	})
 }

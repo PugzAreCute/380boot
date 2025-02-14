@@ -13,6 +13,7 @@ config BOARD_SPECIFIC_OPTIONS
 	select HAVE_ACPI_TABLES
 	select HAVE_ACPI_RESUME
 	select DRIVERS_I2C_CK505
+	select SUPERIO_SMSC_SMSCSUPERIO
 
 config MAINBOARD_DIR
 	default "dell/optiplex_380"
